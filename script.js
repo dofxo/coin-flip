@@ -28,9 +28,9 @@ picks a random objebt between "شیر" & "خط" , then shows it in
 the #result element
 */
 function showResult() {
-    let turn = Math.floor(Math.random() * 2) + 1
+    let turn = Math.floor(Math.random() * 10) + 1
     console.log(turn);
-    if (turn === 1) {
+    if (turn > 5) {
         resultEl.textContent = 'شیر'
         resultEl.style.animation = 'none'
         resultEl.style.display = 'flex'

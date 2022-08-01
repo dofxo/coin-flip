@@ -1,0 +1,133 @@
+/* font */
+@font-face {
+    font-family: dinar;
+    src: url(font/Far_Dinar_Two_Medium.ttf);
+}
+
+/* general */
+
+* {
+    font-family: dinar;
+}
+
+body {
+    margin: 0;
+    background: #2C3333;
+    height: 100vh;
+}
+
+
+/* container for the game */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+}
+
+/* the title */
+.container h1 {
+    color: #A5C9CA;
+}
+
+/* start button for fliping coins */
+.container button {
+    cursor: pointer;
+    color: #395B64;
+    background-color: #A5C9CA;
+    border: none;
+    padding: 0;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: bold;
+    box-shadow: 0 0 10px -5px #A5C9CA;
+    transition: 0.2s all linear;
+
+}
+
+.container button:active {
+    transform: scale(0.8);
+}
+
+.container button:hover {
+    box-shadow: 0 0 20px -5px #A5C9CA;
+    color: #000000;
+}
+
+/* section for the reuslt and loading anim */
+.coins {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* shows the flip result inside of itself */
+#result {
+    width: 50px;
+    height: 40px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: #0096FF;
+    color: #5800FF;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px 10px;
+
+}
+
+/* loading animation */
+#loading {
+    width: 130px;
+    height: 40px;
+    display: none;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    margin: 0 0 10px 0;
+
+}
+
+#loading .col {
+    width: 10%;
+    height: 30px;
+    background-color: blue;
+    border-radius: 10px;
+    animation: loading 1s infinite linear;
+    animation-delay: 0.1s;
+}
+
+#loading .col:nth-of-type(2) {
+    animation: loading2 1s infinite linear;
+    animation-delay: 0.2s;
+
+}
+
+#loading .col:nth-of-type(3) {
+    animation: loading3 1s infinite linear;
+    animation-delay: 0.3s;
+
+}
+
+/* animations for loading */
+@keyframes loading {
+    50% {
+        height: 35px;
+    }
+}
+
+@keyframes loading2 {
+    50% {
+        height: 45px;
+    }
+}
+
+@keyframes loading3 {
+    50% {
+        height: 55px;
+    }
+}

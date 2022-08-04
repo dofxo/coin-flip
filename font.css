@@ -1,0 +1,10 @@
+/* general font*/
+@font-face {
+    font-family: dinar;
+    src: url(font/Far_Dinar_Two_Medium.ttf);
+}
+/* second font */
+@font-face {
+    font-family: numberFont;
+    src: url(font/MouseMemoirs-Regular.ttf);
+}

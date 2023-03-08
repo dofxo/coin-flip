@@ -4,14 +4,14 @@ const startBtn = document.getElementById('start')
 const loadingEl = document.getElementById('loading')
 // event listener for start button
 
-    startBtn.addEventListener('click', function () {
+startBtn.addEventListener('click', function () {
 
-  
-        hideResult()
-        unHideLoading()
-        setTimeout(hideLoading, 300)
-        setTimeout(showResult, 300)
- 
+
+    hideResult()
+    unHideLoading()
+    setTimeout(hideLoading, 300)
+    setTimeout(showResult, 300)
+
 
 })
 
@@ -34,7 +34,7 @@ the #result element
 */
 function showResult() {
     let turn = Math.floor(Math.random() * 10) + 1
-    if (turn > 5) {
+    if (turn >= 5) {
         resultEl.textContent = 'شیر'
         resultEl.style.animation = 'none'
         resultEl.style.display = 'flex'
